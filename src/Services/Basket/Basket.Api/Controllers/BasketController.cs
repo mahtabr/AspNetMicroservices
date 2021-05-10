@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Basket.Api.Entities;
+﻿using Basket.Api.Entities;
 using Basket.Api.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +8,9 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace Basket.Api.Controllers
+namespace Basket.API.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class BasketController : ControllerBase
     {
@@ -23,7 +22,7 @@ namespace Basket.Api.Controllers
         // private readonly IMapper _mapper;
 
         public BasketController(IBasketRepository repository
-          //  , DiscountGrpcService discountGrpcService, IPublishEndpoint publishEndpoint, IMapper mapper
+            //  , DiscountGrpcService discountGrpcService, IPublishEndpoint publishEndpoint, IMapper mapper
             )
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
